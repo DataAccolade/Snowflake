@@ -33,7 +33,7 @@
 - Step 1 (*Mandatory*): Always change the Object names (See columns F in all excel sheets)
 - Step 2 (*Do one of the following*):
     - Example 1: Only change/Add the Prefix and Postfix names of the object names (See column D and C in all excel sheets)
-    - Change all columns in all excel sheets (Column C, D, E, F)
+    - Example 2: Change all columns in all excel sheets (Column C, D, E, F)
 - Use: Use only one of the suggested names in your codes/scripts (Column G or H)
 
 ## LICNESE
