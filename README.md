@@ -30,8 +30,11 @@
 
 
 ### HOW TO USE OR MODIFY
-- Step 1 (*Mandatory*): Always change the Object names (See columns F in all excel sheets)
-- Step 2 (*Do one of the following*):
+- Step 1: Clone or Download this repository
+- Step 2: Go to one of the objects' folders
+- Step 3: Open Excel file
+- Step 4 (*Mandatory*): Always change the Object names (See columns F in all excel sheets)
+- Step 5 (*Do one of the following*):
     - Example 1: Only change/Add the Prefix and Postfix names of the object names (See column D and C in all excel sheets)
     - Example 2: Change all columns in all excel sheets (Column C, D, E, F)
 - Use: Use only one of the suggested names in your codes/scripts (Column G or H)
