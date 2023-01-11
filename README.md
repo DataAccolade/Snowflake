@@ -2,7 +2,7 @@
 ## Naming Covention for Snowflake
 
 ### Templates by Object Types
-- [Virtual Warehouse]:(Virual20%Warehouse/README.md)
+- [Virtual Warehouse]:(Virtual%20Warehouse/README.md)
 - [Database]
 - [Schema]
 - [Tables]
