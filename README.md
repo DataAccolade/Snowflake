@@ -2,19 +2,19 @@
 ## Naming Covention for Snowflake
 
 ### Templates by Object Types
-- [Virtual Warehouse]:(Virtual%20Warehouse/README.md)
-- [Database]
-- [Schema]
-- [Tables]
-- [Views]
-- [Storage]
-- [File Format]
-- [Sequence]
-- [Procedure]
-- [Function]
-- [Pipe]
-- [Stream]
-- [Task]
+- [Virtual Warehouse](Virtual%20Warehouse/README.md)
+- [Database](Database/README.md)
+- [Schema](Schema/README.md)
+- [Tables](Tables/README.md)
+- [Views](Views/README.md)
+- [Storage](Storage/README.md)
+- [File Format](File%20Format/README.md)
+- [Sequence](Sequence/README.md)
+- [Procedure](Procedure/README.md)
+- [Function](Function/README.md)
+- [Pipe](Pipe/README.md)
+- [Stream](Stream/README.md)
+- [Task](Task/README.md)
 
 ### Columns Explanation
 | Excel Column | Header definitions       |   |   | Header Description                                                                                                                                             |   |
