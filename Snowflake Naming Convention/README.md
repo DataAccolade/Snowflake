@@ -34,21 +34,21 @@ A consistency definition is applied for each column within all excel worksheets.
 
 ### How To Use Or Modify
 In this section we are explaining how to use one of the excel sheets, the same logic can be used for other sheets.
-- Step 1: Download the Excel file on your desktop
-- Step 2: Select the desired sheet, in this example we are using the sheet "Table - View - Storage".
+- **`Step 1`**: Download the Excel file on your desktop
+- **`Step 2`**: Select the desired sheet, in this example we are using the sheet "Table - View - Storage".
 In this sheet, the list of schemas, tables, views, and storages can be defined.
 - **`Step 3`**: Pick the right name for your objects. In this example, we are selecting the word "Client" for the table object. (See columns F in all excel sheets)
-- Step 4: Apply a Postfix and/or a Prefix if required.
+- **`Step 4`**: Apply a Postfix and/or a Prefix if required.
 (See column D and C in all excel sheets)
 Note: Clients' naming convention and your internal naming convention can be combined using columns D & E.
-- Step 5: The best practice is not to change column C which contains the Snowflake naming convention as a prefix or a postfix. 
-- Step 6: Use only one of the suggested names in your codes/scripts (Column G or H)
-- Step 7: To add more objects within the excel file, you may add a new row to the excel sheet.
+- **`Step 5`**: The best practice is not to change column C which contains the Snowflake naming convention as a prefix or a postfix. 
+- **`Step 6`**: Use only one of the suggested names in your codes/scripts (Column G or H)
+- **`Step 7`**: To add more objects within the excel file, you may add a new row to the excel sheet.
 For example, 
 
 
-
-Do you want to download the script/code/file? Click [here](https://github.com/DataAccolade/Snowflake/raw/main/Snowflake%20Naming%20Convention/SnowflakeNamingConvention.xlsx) and have fun!
+### Like to have the Code?
+- Download the script/code/file? Click [here](https://github.com/DataAccolade/Snowflake/raw/main/Snowflake%20Naming%20Convention/SnowflakeNamingConvention.xlsx)        and have fun!
 
 ## LICNESE
 [MIT](/LICENSE)
