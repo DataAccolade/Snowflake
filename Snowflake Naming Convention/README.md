@@ -48,6 +48,8 @@ For example,
 
 
 
+Do you want to download the script/code/file? Click [here](https://github.com/DataAccolade/Snowflake/raw/main/Snowflake%20Naming%20Convention/SnowflakeNamingConvention.xlsx) and have fun!
+
 ## LICNESE
 [MIT](/LICENSE)
 
