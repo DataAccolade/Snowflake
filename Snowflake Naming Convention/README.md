@@ -50,7 +50,7 @@ For example,
 ### Like to have the Code?
 - Download the script/code/file? Click [here](https://github.com/DataAccolade/Snowflake/raw/main/Snowflake%20Naming%20Convention/SnowflakeNamingConvention.xlsx)        and have fun!
 
-## LICNESE
+### LICNESE
 [MIT](/LICENSE)
 
 
