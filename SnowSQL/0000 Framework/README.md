@@ -8,7 +8,7 @@ We have prepared frameworks for each of the Snowflake objects below.
 - SP-SQL
 - SP-Python
 
-*Note: SP stands for Stored Procedure.*
+*Note: SP stands for Stored Procedure and FW stands for Framework.*
 
 Scripts are written in a block format as mentioned.
 1. Primary Tests/Evaluation
@@ -19,19 +19,22 @@ Scripts are written in a block format as mentioned.
 
 Lets go through each one of them one by one.
 
-The blocks included in the Table script are used as an example.
+The blocks included in the Table script are described as below.
 
-1. Primary Tests/Evaluation
-`-----************************************************************************************ 
------ Primary Tests/Evaluation
------************************************************************************************ 
---SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
---SELECT * FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'CLIENT' ORDER BY ORDINAL_POSITION;
---SELECT TOP 1000 * FROM SMA_CLIENT.CLIENT;`
-2. Cleanup
-3. Extra Settings
-4. Create object (Table/View/uSP/...)
-5. Test
+1- Primary Tests/Evaluation <br>
+<img src="https://user-images.githubusercontent.com/114548387/213058849-7b670bb6-d263-49c9-bbfc-197315415d38.png" alt="Primary Tests and Evaluation" width="600"/><br>
+2- Cleanup <br>
+<img src="https://user-images.githubusercontent.com/114548387/213058972-b8e32901-6e06-4bf6-a184-b2588a35c0d5.png" alt="Clean Up" width="600"/><br>
+3- Extra Settings <br>
+4- Create object (Table/View/uSP/...) <br>
+<img src="https://user-images.githubusercontent.com/114548387/213059514-ba5585e9-4eae-4621-89c8-81d9dd0eec06.png" alt="Create Object" width="600"/><br>
+*Note: idf stands for Internal Data Fields.* <br>
+5- Test <br>
+<img src="https://user-images.githubusercontent.com/114548387/213060048-5d3029d6-b59c-485e-9ed3-2750384b1afd.png" alt="Test" width="600"/><br>
+
+### Like to have the Code?
+- Click and have fun!
+![image](https://user-images.githubusercontent.com/114548387/213062950-dba259bb-1b8a-4e6b-8b22-4ae44f94e68b.png)
 
 
 [LICENSE](/LICENSE)
