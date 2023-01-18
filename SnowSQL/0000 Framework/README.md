@@ -33,8 +33,9 @@ The blocks included in the Table script are described as below.
 <img src="https://user-images.githubusercontent.com/114548387/213060048-5d3029d6-b59c-485e-9ed3-2750384b1afd.png" alt="Test" width="600"/><br>
 
 ### Like to have the Code?
-- Click and have fun!
-![image](https://user-images.githubusercontent.com/114548387/213062950-dba259bb-1b8a-4e6b-8b22-4ae44f94e68b.png)
+- Click here and have fun!
+<img src="https://user-images.githubusercontent.com/114548387/213062950-dba259bb-1b8a-4e6b-8b22-4ae44f94e68b.png" alt="Framework Folder" width="600"/><br>
+
 
 
 [LICENSE](/LICENSE)
