@@ -50,6 +50,10 @@ For example,
 - Download the script/code/file? Click [here](https://github.com/DataAccolade/Snowflake/raw/main/Snowflake%20Naming%20Convention/SnowflakeNamingConvention.xlsx)        and have fun!
 
 ### LICNESE
+This script is intended only as a supplement to demos and lectures given by "Nik - Shahriar Nikkhah" and/or "Enzo - Parsa Bahrami".
+
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGMENT AND/OR FITNESS FOR A PARTICULAR PURPOSE.
+
 [MIT](/LICENSE)
 
 
