@@ -1,4 +1,3 @@
-# Snowflake Naming Convention
 ## Snowflake Naming Convention
 
 ### Snowflake Inner Objects' Naming Conventions
