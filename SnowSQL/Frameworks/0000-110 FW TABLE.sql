@@ -58,7 +58,7 @@ CREATE TABLE SMA_CLIENT.CLIENT (
 	---------------------------------------------------------------------
 	--- Internal fields
 	---------------------------------------------------------------------
-		idf_CLIENT				smallint		NOT NULL    identity(1,1)	
+		idf_CLIENT				smallint		NOT NULL    identity(1, 1)
 	--,	idf_GroupRun			smallint			NULL 
 	--,	idf_SequanceGroupRun	smallint			NULL 	
     ---------------------------------------------------------------------
@@ -95,7 +95,8 @@ ALTER TABLE SMA_CLIENT.CLIENT ADD CONSTRAINT PK__SMA_CLIENT__CLIENT__idf_CLIENT 
 --- Test
 ---************************************************************************************     
 SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
-SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'SMA_CLIENT' AND TABLE_NAME = 'CLIENT' ORDER BY TABLE_SCHEMA, TABLE_NAME, ORDINAL_POSITION;
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS 
+	WHERE TABLE_SCHEMA = 'SMA_CLIENT' AND TABLE_NAME = 'CLIENT' ORDER BY TABLE_SCHEMA, TABLE_NAME, ORDINAL_POSITION;
 SELECT * FROM SMA_CLIENT.CLIENT;
 SHOW TABLES;
 SHOW COLUMNS;
