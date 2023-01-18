@@ -33,7 +33,7 @@ The blocks included in the Table script are described as below.
 <img src="https://user-images.githubusercontent.com/114548387/213060048-5d3029d6-b59c-485e-9ed3-2750384b1afd.png" alt="Test" width="600"/><br>
 
 ### Like to have the Code?
-- Click [here](https://github.com/DataAccolade/Snowflake/tree/main/SnowSQL/2022-12-13%20SnowSQLFramework4Developers) and have fun! <br>
+- Click [here](https://downgit.github.io/#/home?url=https://github.com/DataAccolade/Snowflake/tree/main/SnowSQL/2022-12-13%20SnowSQLFramework4Developers) and have fun! <br>
 <img src="https://user-images.githubusercontent.com/114548387/213066397-aa5af86d-09dc-45d1-ade4-c7beb7074e83.png" alt="Framework Folder" width="300"/><br>
 
 
