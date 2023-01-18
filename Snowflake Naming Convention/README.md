@@ -8,7 +8,7 @@ Data Accolade has created an excel file that contains Snowflake naming conventio
 - Schema
 - Tables
 - Views
-- Storage
+- Stage/Storage Integration 
 - File Format
 - Sequence
 - Procedure
