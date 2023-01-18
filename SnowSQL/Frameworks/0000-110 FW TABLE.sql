@@ -64,10 +64,10 @@ CREATE TABLE SMA_CLIENT.CLIENT (
     ---------------------------------------------------------------------
 	--- Main Business Data Fields
 	---------------------------------------------------------------------    
-    ,   BizField1				int				NOT NULL
-    ,   BizField2				text				NULL    default ('')
-    ,   BizField3 				varchar(100)	
-	,   BizField4				text(100)	
+    ,   BusinessField1			int				NOT NULL
+    ,   BusinessField2			text				NULL    default ('')
+    ,   BusinessField3 			varchar(100)	
+	,   BusinessField4			text(100)	
 
     ---------------------------------------------------------------------
 	--- More internal fields
