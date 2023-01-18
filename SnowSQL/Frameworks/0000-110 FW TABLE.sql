@@ -59,8 +59,8 @@ CREATE TABLE SMA_CLIENT.CLIENT (
 	--- Internal fields
 	---------------------------------------------------------------------
 		idf_CLIENT				smallint		NOT NULL    identity(1,1)	
-	--,	idf_GroupRun			smallint			NULL --to be tested --> constraint "DF__SMA_CLIENT__CLIENT__idf_GroupRun"				default 1
-	--,	idf_SequanceGroupRun	smallint			NULL --to be tested --> constraint "DF__SMA_CLIENT__CLIENT__idf_SequanceGroupRun"		default 1
+	--,	idf_GroupRun			smallint			NULL 
+	--,	idf_SequanceGroupRun	smallint			NULL 	
     ---------------------------------------------------------------------
 	--- Main Business Data Fields
 	---------------------------------------------------------------------    
