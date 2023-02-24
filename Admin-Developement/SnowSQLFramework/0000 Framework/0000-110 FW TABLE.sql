@@ -36,7 +36,9 @@ USE SCHEMA SMA_CLIENT;
 --SELECT * FROM INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'CLIENT' ORDER BY ORDINAL_POSITION;
 --SELECT TOP 1000 * FROM SMA_CLIENT.CLIENT;
 --SHOW TABLES;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TABLES;
 --SHOW COLUMNS;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.COLUMNS;
 --T--RUNCATE TABLE SMA_CLIENT.CLIENT;
 --D--ELETE FROM SMA_CLIENT.CLIENT WHERE "" = '1' and "" = '';
 
@@ -58,16 +60,16 @@ CREATE TABLE SMA_CLIENT.CLIENT (
 	---------------------------------------------------------------------
 	--- Internal fields
 	---------------------------------------------------------------------
-		idf_CLIENT				smallint		NOT NULL    identity(1, 1)
-	--,	idf_GroupRun			smallint			NULL 
-	--,	idf_SequanceGroupRun	smallint			NULL 	
+		idf_CLIENT				smallint		NOT NULL    identity(1,1)	
+	--,	idf_GroupRun			smallint			NULL --to be tested --> constraint "DF__SMA_CLIENT__CLIENT__idf_GroupRun"				default 1
+	--,	idf_SequanceGroupRun	smallint			NULL --to be tested --> constraint "DF__SMA_CLIENT__CLIENT__idf_SequanceGroupRun"		default 1
     ---------------------------------------------------------------------
 	--- Main Business Data Fields
 	---------------------------------------------------------------------    
-    ,   BusinessField1			int				NOT NULL
-    ,   BusinessField2			text				NULL    default ('')
-    ,   BusinessField3 			varchar(100)	
-	,   BusinessField4			text(100)	
+    ,   BizField1				int				NOT NULL
+    ,   BizField2				text				NULL    default ('')
+    ,   BizField3 				varchar(100)	
+	,   BizField4				text(100)	
 
     ---------------------------------------------------------------------
 	--- More internal fields
@@ -95,8 +97,9 @@ ALTER TABLE SMA_CLIENT.CLIENT ADD CONSTRAINT PK__SMA_CLIENT__CLIENT__idf_CLIENT 
 --- Test
 ---************************************************************************************     
 SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
-SELECT * FROM INFORMATION_SCHEMA.COLUMNS 
-	WHERE TABLE_SCHEMA = 'SMA_CLIENT' AND TABLE_NAME = 'CLIENT' ORDER BY TABLE_SCHEMA, TABLE_NAME, ORDINAL_POSITION;
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'SMA_CLIENT' AND TABLE_NAME = 'CLIENT' ORDER BY TABLE_SCHEMA, TABLE_NAME, ORDINAL_POSITION;
 SELECT * FROM SMA_CLIENT.CLIENT;
 SHOW TABLES;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TABLES;
 SHOW COLUMNS;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.COLUMNS;

@@ -1,6 +1,6 @@
 ----- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ----- Framework: Nik - Shahriar Nikkhah               Date: 2022-09-21	Time: 23:04
------ Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 21:46
+----- Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 21:51
 ----- 
 ----- Input :
 ----- 
@@ -25,27 +25,20 @@
 -----   PARTICULAR PURPOSE.
 ----- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 USE DATABASE dataaccolade;
-USE WAREHOUSE "SF_DSDA_ENG_WH";
-USE SCHEMA SMA_CLIENT;
+--USE WAREHOUSE "SF_DSDA_ENG_WH";
 
 
 -----************************************************************************************ 
 ----- Primary Tests/Evaluation
 -----************************************************************************************ 
---SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
---SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SV_CLIENT' ORDER BY ORDINAL_POSITION;
---SELECT * FROM INFORMATION_SCHEMA.PROCEDURES
-
---SHOW TABLES;
---SHOW VIEWS;
---SHOW COLUMNS;
---SHOW PROCEDURES;
-
+SHOW WAREHOUSES;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_LOAD_HISTORY;
 
 -----************************************************************************************ 
 ----- Cleanup
 -----************************************************************************************ 
---D-ROP PROCEDURE IF EXISTS SMA_CLIENT.PR_CLIENT();
+-- DROP WAREHOUSE IF EXISTS SF_DSDA_ENG_WH;
+
 
 -----************************************************************************************ 
 ----- Extra Settings
@@ -55,25 +48,17 @@ USE SCHEMA SMA_CLIENT;
 ---************************************************************************************ 
 --- Create object (Table/View/uSP/...)
 ---************************************************************************************ 
-CREATE OR REPLACE PROCEDURE SMA_CLIENT.PR_CLIENT()
-  RETURN TABLE()
-  LANGUAGE sql
-  AS
-  $$
-    ---------------------------------------------------------------------
-    --- Main Business Data Fields
-    ---------------------------------------------------------------------    
-    DECLARE
-        res resultset default (SELECT * FROM  SMA_CLIENT.SV_CLIENT);
-    DEGIN
-        RETURN table(res);
-    END;
-  $$
-  ;
+CREATE WAREHOUSE SF_DSDA_ENG_WH WITH
+	WAREHOUSE_TYPE = STANDARD
+	WAREHOUSE_SIZE = 'X-SMALL'
+	AUTO_SUSPEND = 180
+	AUTO_RESUME = TRUE
+	INITIALLY_SUSPENDED = TRUE;
+
 
 ---************************************************************************************ 
 --- Test
 ---************************************************************************************     
---SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
-CALL SMA_CLIENT.PR_CLIENT();
-SHOW PROCEDURES;
+SHOW WAREHOUSES;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.WAREHOUSE_LOAD_HISTORY;
+

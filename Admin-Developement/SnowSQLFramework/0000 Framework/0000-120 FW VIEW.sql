@@ -1,6 +1,6 @@
 ----- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ----- Framework: Nik - Shahriar Nikkhah               Date: 2022-09-21	Time: 23:04
------ Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 22:17
+----- Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 23:33
 ----- 
 ----- Input :
 ----- 
@@ -33,19 +33,22 @@ USE SCHEMA SMA_CLIENT;
 ----- Primary Tests/Evaluation
 -----************************************************************************************ 
 --SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
+--SELECT * FROM INFORMATION_SCHEMA.VIEWS WHERE TABLE_NAME = 'SV_CLIENT' ORDER BY TABLE_CATALOG , TABLE_SCHEMA , TABLE_NAME;
 --SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'SV_CLIENT' ORDER BY ORDINAL_POSITION;
---SELECT * FROM INFORMATION_SCHEMA.PROCEDURES
+--SELECT TOP 1000 * FROM SMA_CLIENT.SV_CLIENT;
 
 --SHOW TABLES;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TABLES;
 --SHOW VIEWS;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.VIEWS;
 --SHOW COLUMNS;
-SHOW PROCEDURES;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.COLUMNS;
 
 
 -----************************************************************************************ 
 ----- Cleanup
 -----************************************************************************************ 
---D--ROP PROCEDURE IF EXISTS SMA_CLIENT.PRP_COPYTABLE( STRING,  STRING,  INT);
+--D--ROP VIEW IF EXISTS SMA_CLIENT.SV_CLIENT;
 
 -----************************************************************************************ 
 ----- Extra Settings
@@ -55,30 +58,24 @@ SHOW PROCEDURES;
 ---************************************************************************************ 
 --- Create object (Table/View/uSP/...)
 ---************************************************************************************ 
-CREATE OR REPLACE PROCEDURE SMA_CLIENT.PRP_COPYTABLE(from_table STRING, to_table STRING, count INT)
-  RETURNS STRING
-  LANGUAGE PYTHON
-  RUNTIME_VERSION = '3.8'
-  PACKAGES = ('snowflake-snowpark-python')
-  HANDLER = 'run'
+CREATE OR REPLACE VIEW SMA_CLIENT.SV_CLIENT
 AS
-$$
-    #---------------------------------------------------------------------
-    #--- Main Business Data Fields
-    #---------------------------------------------------------------------    
-def run(session, from_table, to_table, count):
-    session.table(from_table).limit(count).write.save_as_table(to_table)
-    return "SUCCESS"
-$$
-;
+    ---------------------------------------------------------------------
+	--- Main Business Data Fields
+	---------------------------------------------------------------------    
+    SELECT  * 
+    FROM    SMA_CLIENT.CLIENT 
+    ;
 
 ---************************************************************************************ 
 --- Test
 ---************************************************************************************     
 --SELECT * FROM INFORMATION_SCHEMA.TABLE_STORAGE_METRICS WHERE TABLE_DROPPED IS NULL AND TABLE_NAME = 'CLIENT';
-CALL SMA_CLIENT.PRP_COPYTABLE('SMA_CLIENT.CLIENT' , 'SMA_CLIENT.CLIENT1' , 0);
-CALL SMA_CLIENT.PRP_COPYTABLE('SMA_CLIENT.CLIENT' , 'SMA_CLIENT.CLIENT2' , 2);
-
-SHOW PROCEDURES;
-SHOW TABLES;
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'SMA_CLIENT' AND TABLE_NAME = 'SV_CLIENT' ORDER BY TABLE_SCHEMA, TABLE_NAME, ORDINAL_POSITION;
+SELECT * FROM SMA_CLIENT.SV_CLIENT;
+--SHOW TABLES;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.TABLES;
+SHOW VIEWS;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.VIEWS;
 SHOW COLUMNS;
+--SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.COLUMNS;

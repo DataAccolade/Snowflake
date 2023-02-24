@@ -1,6 +1,6 @@
 ----- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ----- Framework: Nik - Shahriar Nikkhah               Date: 2022-09-21	Time: 23:04
------ Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 21:51
+----- Author:    Enzo - Parsa Bahrami                 Date: 2023-01-09	Time: 22:27
 ----- 
 ----- Input :
 ----- 
@@ -25,19 +25,19 @@
 -----   PARTICULAR PURPOSE.
 ----- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 USE DATABASE dataaccolade;
---USE WAREHOUSE "SF_DSDA_ENG_WH";
+USE WAREHOUSE "SF_DSDA_ENG_WH";
 
 
 -----************************************************************************************ 
 ----- Primary Tests/Evaluation
 -----************************************************************************************ 
-SHOW WAREHOUSES;
-
+SHOW SCHEMAS;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.SCHEMATA;
 
 -----************************************************************************************ 
 ----- Cleanup
 -----************************************************************************************ 
--- DROP WAREHOUSE IF EXISTS SF_DSDA_ENG_WH;
+-- DROP SCHEMA IF EXISTS SMA_CLIENT;
 
 
 -----************************************************************************************ 
@@ -48,16 +48,12 @@ SHOW WAREHOUSES;
 ---************************************************************************************ 
 --- Create object (Table/View/uSP/...)
 ---************************************************************************************ 
-CREATE WAREHOUSE SF_DSDA_ENG_WH WITH
-	WAREHOUSE_TYPE = STANDARD
-	WAREHOUSE_SIZE = 'X-SMALL'
-	AUTO_SUSPEND = 180
-	AUTO_RESUME = TRUE
-	INITIALLY_SUSPENDED = TRUE;
+CREATE SCHEMA SMA_CLIENT;
 
 
 ---************************************************************************************ 
 --- Test
 ---************************************************************************************     
-SHOW WAREHOUSES;
-
+--SHOW WAREHOUSES;
+SHOW SCHEMAS;
+SELECT * FROM SNOWFLAKE.ACCOUNT_USAGE.SCHEMATA;
